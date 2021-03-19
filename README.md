@@ -1,8 +1,8 @@
-# freecodecamp-projects
-My projects for FreeCodeCamp
+# FreeCodeCamp - Projects
+My projects for FreeCodeCamp. Uploading these here to keep track of my progress. Some of the bigger projects might get their own repo at some point.
 
-Some of the bigger projects might get their own repo at some point
-
-## current index
+## Current Index
 1. Responsive Web Design
-* Evangelion Landing Page - a product landing page based on Neon Genesis Evangelion. Focus is on a high contrast design.
+   * William Gibson Tribute - My first ever html/css project.
+   * Feedback Form - A feedback form. Learned about html forms and data validation.
+   * Evangelion Landing Page - A product landing page based on Neon Genesis Evangelion. Learned about flexbox.
