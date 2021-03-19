@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    
+    <title>JLPT: Self-Assessment Form</title>
+
+    <link rel="stylesheet" href="form.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1 id="title">JLPT Study Self-Assessment Form</h1>
+    <p id="description">Thank you for helping us improve our service</p>
+
+    <div class="container">
+        <form id="survey-form" action="/submit-form">
+            <h2 style="margin-top: 0;">Personal Information</h2>
+            <div class="input-section">
+                <label for="name" id="name-label">Name</label>
+                <input name="name-enter" id="name" type="text" placeholder="Enter your name" required>
+            </div>
+
+            <!--email-->
+            <div class="input-section">
+                <label for="email" id="email-label">Email</label>
+                <input name="email-enter" id="email" type="email" placeholder="Enter your email" required>
+            </div>
+
+            <h2>Language Ability</h2>
+            <!--vocab-->
+            <div class="input-section">
+                <label for="number" id="number-label">What is your estimated known vocabulary?</label>
+                <input name="number-enter" placeholder="Enter the number" type="number" id="number" min="1" max="100000">
+            </div>
+
+            <div class="input-section">
+                <p>What did you base this number on?</p>
+                <label for="based-on-anki">
+                    <input id="based-on-anki" 
+                    type="radio" 
+                    name="vocab-based-on" 
+                    value="based-on-anki"> Number of Anki cards
+                </label>
+                <label for="based-on-test">
+                    <input id="based-on-test" 
+                    type="radio" 
+                    name="vocab-based-on" 
+                    value="based-on-test"> Vocab Assessment Test (<a href="https://glenn-sun.github.io/japanese-vocab-test/">click here to take</a>)</label>
+                </label>
+                <label for="based-on-guess">
+                    <input id="based-on-guess" 
+                    type="radio" 
+                    name="vocab-based-on" 
+                    value="based-on-guess"> Just guessing
+                </label>
+            </div>
+
+            <!--grammar level-->
+            <div class="input-section">
+                <p>How would you assess your Grammar level before starting with our methods?</p>
+                <select name="grammar-before" id="dropdown">
+                    <option disabled selected value>Select current grammar level</option>
+                    <option value="below-n5">Below N5</option>
+                    <option value="n5">N5</option>
+                    <option value="n4">N4</option>
+                    <option value="n3">N3</option>
+                    <option value="n2">N2</option>
+                    <option value="n1">N1</option>
+                    <option value="above-n1">Significantly above N1</option>
+                </select>
+            </div>
+
+            <div class="input-section">
+            <p>How would you assess your Grammar level after starting with our methods?</p>
+                <select name="grammar-after" id="dropdown2">
+                    <option disabled selected value>Select current grammar level</option>
+                    <option value="below-n5">Below N5</option>
+                    <option value="n5">N5</option>
+                    <option value="n4">N4</option>
+                    <option value="n3">N3</option>
+                    <option value="n2">N2</option>
+                    <option value="n1">N1</option>
+                    <option value="above-n1">Significantly above N1</option>
+                </select>
+            </div>
+
+            <!--checkboxes-->
+            <div class="input-section">
+                <p>What would you like to do more of in the future?<p>
+                <label for="grammar">
+                    <input  id="grammar" 
+                            type="checkbox" 
+                            value="want-to-do" 
+                            class="input-checkbox">
+                            Study grammar points
+                </label>
+                <label for="vocab">
+                    <input  id="vocab" 
+                            type="checkbox" 
+                            value="want-to-do" 
+                            class="input-checkbox">
+                            More Anki vocab
+                </label>
+                <label for="immersion">
+                    <input  id="immersion" 
+                            type="checkbox" 
+                            value="want-to-do" 
+                            class="input-checkbox">
+                            More immersion
+                </label>
+                <label for="conversation">
+                    <input  id="conversation" 
+                            type="checkbox" 
+                            value="want-to-do" 
+                            class="input-checkbox">
+                            More conversation practice
+                </label>
+                <label for="nothing">
+                    <input  id="nothing" 
+                            type="checkbox" 
+                            value="want-to-do" 
+                            class="input-checkbox">
+                            Nothing really, the current program is good
+                </label>
+            </div>
+
+            <div class="input-section">
+                <p>Further Comments</p>
+                <textarea   id="further-comments" 
+                            name="further-comments" 
+                            rows="4" 
+                            cols="50" 
+                            maxlength="1000" 
+                            placeholder="What else is on your mind..."></textarea>
+            </div>
+
+            <h2>Privacy</h2>
+            <div class="input-section">
+                <p>Can we use your responses as testimonials for our service?</p>
+                <label for="use-with-name">
+                    <input id="use-with-name" type="radio" name="testimonial-permission" value="use-with-name"> Yes, with my name
+                </label>
+                <label for="use-without-name">
+                    <input id="use-without-name" type="radio" name="testimonial-permission" value="use-without-name"> Yes, anonymously
+                </label>
+                <label for="dont-use">
+                    <input id="dont-use" type="radio" name="testimonial-permission" value="dont-use"> No
+                </label>
+            </div>
+
+            <div class="input-section">
+                <p>Can we get in contact with you to ask more questions about your experience?</p>
+                <label for="can-contact">
+                    <input id="can-contact" type="radio" name="contact-permission" value="can-contact"> Yes
+                </label>
+                <label for="cannot-contact">
+                    <input id="cannot-contact" type="radio" name="contact-permission" value="cannot-contact"> No
+                </label>
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
