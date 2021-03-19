@@ -1,0 +1,72 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Raleway&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #131313;
+        padding: 20px;
+    }
+
+	h1 {
+    text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		color: #f5f3f4;	
+	}
+
+	h2 {
+		font-family: 'Montserrat:wght@400', sans-serif;
+		color: #f5f3f4;	
+	}
+
+	p, ul {
+		font-family: 'Raleway', sans-serif;
+		color: #f5f3f4;	
+	}
+
+	a:visited {
+		color: #aaeeaa;
+	}
+
+	#img-div{
+		background-color: #f5f3f4;
+		margin: auto;
+		width: 80%;
+		height: auto;
+		padding: 10px;
+		border-radius: 20px;
+	}
+	
+	#image {
+		border-radius: 10px;
+		max-width: 100%;
+		display: block;
+		height: auto;
+		margin: auto;
+	}
+
+	#img-caption {
+		color: #131313;
+	}
+
+	#tribute-info {
+		font-size: 14pt;
+	}
+
+	#tribute {
+		font-family: 'Raleway', sans-serif;
+		color: #f5f3f4;
+		font-size: 16pt;		
+	}
+
+	#tribute-link {
+		color: #aaeeaa;
+	}
+  
+  @media (max-width: 500px) {
+  #img-div {
+    width: 95%;
+  }
+}
+</style>
