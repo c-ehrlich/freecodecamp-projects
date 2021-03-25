@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+
+/** { border: 1px solid red; }*/
+
+/*
+    * DEFINE FONTS AS VARIABLES
+    */
+
+:root {
+    --col-light: antiquewhite;
+    --col-dark: rgb(41, 37, 37);
+}
+
+#navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--col-light);
+    border-bottom: 1px solid var(--col-dark);
+}
+#nav-list {
+    display: flex;
+    justify-content: center;
+}
+#nav-list > li {
+    list-style-type: none;
+}
+
+/*#nav-list > a:hover { color: var(--col-dark); }
+#nav-list > a:visited { color:var(--col-dark); }*/
+
+.nav-list-item {
+    padding: 16px 32px 16px 32px;
+    list-style-type: none;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 700;
+    font-size: 1.4em;
+    color: var(--col-dark);
+    text-transform: uppercase;
+}
+@media (min-width: 750px) { .nav-list-item { padding-left: 48px; padding-right: 48px; } }
+@media (min-width: 1536px) { .nav-list-item { padding-left: 64px; padding-right: 64px; } }
+
+h1 {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 1.1em;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+h2 {
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 300;
+    font-size: 2.4em;
+}
+a {
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center; 
+}
+
+#welcome-section {
+    padding: 0 16px 0 16px;
+}
+#projects,
+#contact {
+    padding: 0 16px 64px 16px;
+}
+
+#welcome-section,
+#contact {
+    height: 100vh;
+    background-color: var(--col-dark);
+    color: var(--col-light);
+}
+
+#welcome-section { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}    
+#welcome-div > h1,
+#welcome-div > h2 {
+    background-color: var(--col-light);
+    color: var(--col-dark);
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#projects {
+    background-color: var(--col-light);
+    color: var(--col-dark);
+}
+
+
+.project-tile {
+    color: var(--col-dark);
+    padding: 32px 0 32px 0;
+    display: grid;
+    grid-template-rows: 24px auto (100vw - 32px) 24px 24px 24px 24px 24px 64px;
+    grid-template-columns: 72px 16px auto;
+    grid-template-areas:
+        "a1  a1  a1 "
+        "a2  a2  a2 "
+        "pic pic pic"
+        "b1  e1  c1 "
+        "b2  e2  c2 "
+        "b3  e3  c3 "
+        "b4  e4  c4 "
+        ".   .   .  "
+        "d1  d1  d1 ";
+}
+
+@media (min-width: 750px) {
+    #welcome-div,
+    #projects-header,
+    #projects-div,
+    #contact-div {
+        width: 720px;
+        margin: auto;
+        padding: 0;
+    }
+
+    #projects-div {
+        justify-content: center;
+        display: grid;
+        margin: auto;
+        grid-template-columns: 720px;
+    }
+    .project-tile {
+        padding: 0;
+        width: 720px;
+        min-width: 720px;
+        margin: 32px 0 8px 0;
+        display: grid;
+        grid-template-rows: 24px 96px 24px 24px 24px 24px 24px 80px;
+        grid-template-columns: 72px 16px auto 24px 296px;
+        grid-template-areas:
+            "a1  a1  a1  a1  a1"
+            "a2  a2  a2  .   pic"
+            "b1  e1  c1  .   pic"
+            "b2  e2  c2  .   pic"
+            "b3  e3  c3  .   pic"
+            "b4  e4  c4  .   pic"
+            ".   .   .   .   pic"
+            "d1  d1  d1  .   pic";
+    }
+}
+#show-all-div {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+#show-all-button {
+    border: 1px solid var(--col-dark);
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: var(--col-dark);
+    padding: 8px;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 300; 
+}
+
+#show-all-button > #show-all-link {
+    text-decoration: none;
+}
+
+@media (min-width: 1536px) {
+    #welcome-div,
+    #projects-header,
+    #projects-div,
+    #contact-div {
+        width: 1504px;
+        margin: auto;
+    }
+
+    #projects-div {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 720px 720px;
+        grid-column-gap: 64px;
+    }
+    .project-tile {
+        padding: 0;
+    }
+}
+
+.a1 { grid-area: a1; font-family: 'Roboto Condensed', sans-serif; font-weight: 300; }
+.a2 { grid-area: a2; }
+.b1 { grid-area: b1; }
+.b2 { grid-area: b2; }
+.b3 { grid-area: b3; }
+.b4 { grid-area: b4; }
+.c1 { grid-area: c1; }
+.c2 { grid-area: c2; }
+.c3 { grid-area: c3; }
+.c4 { grid-area: c4; }
+.d1 { grid-area: d1; }
+.pic { grid-area: pic; width: 100%; height: auto; }
+.e1 { grid-area: e1; } 
+.e2 { grid-area: e2; } 
+.e3 { grid-area: e3; } 
+.e4 { grid-area: e4; }
+
+.a2  {
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-size: 2.4em;
+    line-height: 1.3em;
+    font-kerning: normal;
+    font-weight: 700;
+    vertical-align: top;
+}
+.a2 > h3 {
+    padding: 0;
+    margin: -8px 0 0 -1px;
+}
+
+.b1, .b2, .b3, .b4 { 
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 500; 
+    align-self: center; 
+}
+
+.c1, .c2, .c3, .c4 { 
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 300; 
+    border-bottom: 0.5px solid var(--col-dark); 
+    align-self: center;
+}
+.d1 {
+    font-family: 'Roboto Condensed', sans-serif; font-weight: 300; 
+}
+/* DIRTY HACK TO GET SPACING ON MOBILE */
+@media (max-width: 749px) {
+    .pic {
+        margin-bottom: 8px;
+    }
+    .d1 {
+        margin-top: 16px;
+    }
+}
+
+.e1, .e2, .e3, .e4 {
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 500; 
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+#contact-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 64px;
+}
+#contact-div > h1 { background-color: var(--col-light); color: var(--col-dark); padding-left: 8px; margin-bottom: 0; }
+#contact-div > h2 { background-color: var(--col-light); color: var(--col-dark); padding-left: 8px; }
+
+#contact-options {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-link {
+    font-size: 2em;
+    color: var(--col-light);
+    margin-left: 32px;
+    margin-right: 32px;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 300;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--col-light);
+    color: var(--col-dark);
+    margin: auto;
+}
+#footer-text {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 300;
+    font-size: 1em;
+    color: var(--col-dark);
+}
+
+#projects-header {
+    padding-top: 64px
+}
+
+/* hack to reduce space between projects header and first project on mobile
+ */
+@media (max-width: 750px) {
+    #projects-header {
+        margin-bottom: 24px;
+    }
+}
