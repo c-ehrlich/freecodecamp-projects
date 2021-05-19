@@ -9,8 +9,7 @@ function palindrome(str) {
     // to the other half.
     // for an odd length string, we know it's a palindrome after comparing half rounded down
     // (for example, the first 4 characters for a 9 character string)
-    for (let i = 0; i < str.length / 2; i++)
-    {
+    for (let i = 0; i < str.length / 2; i++) {
       if (str[i] != str[str.length - 1 - i]) {
         return false;
       }
